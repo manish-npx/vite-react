@@ -1,13 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            MS-Point
-          </Link>
+          <NavLink className="navbar-brand" to="/" end>
+            {({ isActive }) => (
+              <span className={isActive ? "active" : ""}>V&ITo</span>
+            )}
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,24 +24,32 @@ function NavBar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
-                  Home
-                </Link>
+                <NavLink className="nav-link" aria-current="page" to="/" end>
+                  {({ isActive }) => (
+                    <span className={isActive ? "active" : ""}>Home</span>
+                  )}
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/student">
-                  Student
-                </Link>
+                <NavLink className="nav-link" to="/student">
+                  {({ isActive }) => (
+                    <span className={isActive ? "active" : ""}>Student</span>
+                  )}
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about-us">
-                  About-Us
-                </Link>
+                <NavLink className="nav-link" to="/about-us">
+                  {({ isActive }) => (
+                    <span className={isActive ? "active" : ""}>About-Us</span>
+                  )}
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact-us">
-                  Contacts-Us
-                </Link>
+                <NavLink className="nav-link" to="/contact-us">
+                  {({ isActive }) => (
+                    <span className={isActive ? "active" : ""}>Contact-Us</span>
+                  )}
+                </NavLink>
               </li>
             </ul>
           </div>
