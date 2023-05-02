@@ -7,7 +7,7 @@
   <br>
 </p>
 
-<h2 align='center'>Awesome Vite.js</h2>
+<h2 align='center'>Awesome Vite.js With React JS</h2>
 
 <p align='center'>
 A curated list of awesome things related to <a href='https://github.com/vitejs/vite'>Vite.js</a>
